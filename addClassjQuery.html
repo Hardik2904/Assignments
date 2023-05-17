@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>addClass() using jQuery</title>
+    <script src="jquery-3.6.1.js"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.7.0.min.js"
+        integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+        crossorigin="anonymous">
+    </script>
+    <style>
+        .important {
+            font-weight: bold;
+            font-size: 30px;
+        }
+        .colorChange {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <h1>This is heading 1</h1>
+    <h2>This is heading 2</h2>
+
+    <p>This is first paragraph</p>
+    <p>This is second paragraph</p>
+
+    <div>This is important text.</div><br>
+    <button>Add Class</button>
+    <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+                $("h1, h2, p").addClass("colorChange");
+                $("div").addClass("important");
+            });
+        });
+    </script>
+</body>
+</html>

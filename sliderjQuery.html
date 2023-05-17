@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>slideDown(), slideUp(), slideToggle() using jQuery</title>
+    <script src="jquery-3.6.1.js"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.7.0.min.js"
+        integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+        crossorigin="anonymous">
+    </script>
+    <style>
+        h2 {
+            text-align: center;
+        }
+        #downPanel, #down {
+            background-color: greenyellow;
+            padding: 5px;
+            text-align: center;
+            border: 1px solid #c3c3c3;
+        }
+        #downPanel {
+            background-color: palevioletred;
+            padding: 50px;
+            display: none;
+        }
+        #upPanel, #up {
+            background-color: greenyellow;
+            padding: 5px;
+            text-align: center;
+            border: 1px solid #c3c3c3;
+        }
+        #upPanel {
+            background-color: palevioletred;
+            padding: 50px;
+        }
+        #togglePanel, #toggle {
+            background-color: greenyellow;
+            padding: 5px;
+            text-align: center;
+            border: 1px solid #c3c3c3;
+        }
+        #togglePanel {
+            background-color: palevioletred;
+            padding: 50px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h2>Slide Down Example</h2>
+    <div id="down">Slide Down</div>
+    <div id="downPanel">This is Slide Down example.</div><br>
+
+    <h2>Slide Up Example</h2>
+    <div id="up">Slide Up</div>
+    <div id="upPanel">This is Slide Up example.</div><br>
+
+    <h2>Slide Toggle Example</h2>
+    <div id="toggle">Slide Toggle</div>
+    <div id="togglePanel">This is Slide Toggle example.</div>
+
+    <script>
+        $(document).ready(function(){
+            $("#down").click(function(){
+                $("#downPanel").slideDown("slow");
+            });
+            $("#up").click(function(){
+                $("#upPanel").slideUp("slow");
+            });
+            $("#toggle").click(function(){
+                $("#togglePanel").slideToggle("slow");
+            });
+        });
+    </script>
+</body>
+</html>
